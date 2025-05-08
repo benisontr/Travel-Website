@@ -477,31 +477,31 @@ body {
     color: #fff;
   }
 
-/* Hide hamburger by default */
+/* Mobile Hamburger Styling */
 .hamburger {
   display: none;
   font-size: 28px;
-  cursor: pointer;
   color: #13543e;
+  cursor: pointer;
+  margin-left: auto;
 }
 
-/* Base nav style */
-.main-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
-
-/* Mobile styles */
+/* Responsive Navbar */
 @media (max-width: 768px) {
+  .header-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   .main-nav {
     display: none;
     width: 100%;
-    background-color: white; /* Important: ensure nav background is visible */
+    background-color: #fff;
     position: absolute;
     top: 60px;
     left: 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    z-index: 99;
   }
 
   .main-nav.active {
@@ -510,20 +510,21 @@ body {
 
   .main-nav ul {
     flex-direction: column;
-    padding: 15px;
+    padding: 10px 20px;
     gap: 10px;
   }
 
-  .main-nav a {
+  .main-nav li a {
     color: #13543e;
     font-weight: 600;
   }
 
   .hamburger {
     display: block;
-    font-size: 28px;
-    color: #13543e;
-    cursor: pointer;
+  }
+
+  .contact-help {
+    display: none; /* Hide help info on mobile to save space */
   }
 }
 
