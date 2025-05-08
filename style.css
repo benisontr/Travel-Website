@@ -488,25 +488,48 @@ body {
   z-index: 1000; /* Ensure it's on top */
 }
 
-@media (min-width: 601px) {
+@media (max-width: 768px) {
   .hamburger {
     display: block;
     position: absolute;
-    top: 15px;
-    right: 20px;
+    top: 15px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    cursor: pointer; /* Make it clear it's clickable */
+    z-index: 10; /* Ensure it's above the nav */
   }
 
   .main-nav {
     position: absolute;
-    top: 60px;
+    top: 60px; /* Adjust to be below the hamburger */
     left: 0;
     width: 100%;
     background: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     display: none;
+    overflow: hidden; /* Prevent content overflow during animation */
+    transition: max-height 0.3s ease-in-out; /* Smooth slide-down */
+    max-height: 0; /* Start with no height */
   }
 
   .main-nav.active {
-    display: block;
+    display: block; /* Still needed for JS to toggle */
+    max-height: 500px; /* Adjust based on your nav content height */
+  }
+
+  .main-nav ul {
+    padding: 1rem 0; /* Add some top/bottom padding for the list */
+    margin: 0;
+    list-style: none;
+  }
+
+  .main-nav ul li {
+    padding: 0.75rem 1.5rem; /* Add padding to list items */
+    text-align: center; /* Center the links */
+  }
+
+  .main-nav ul li a {
+    display: block; /* Make the whole area clickable */
+    text-decoration: none;
+    color: inherit; /* Inherit text color from parent */
   }
 }
