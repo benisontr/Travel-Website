@@ -15,24 +15,24 @@
     <div class="logo">RouteX</div>
 
     <!-- Hamburger Menu (Mobile) -->
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu">☰</button>
 
     <!-- Navigation Menu -->
     <nav class="main-nav" id="navbar">
       <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">ABOUT US</a></li>
-        <li><a href="#">STORY</a></li>
-        <li><a href="#">VISA</a></li>
-        <li><a href="#">BLOG</a></li>
-        <li><a href="#">PAGE</a></li>
-        <li><a href="#">CONTACT</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Story</a></li>
+        <li><a href="#">Visa</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Page</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
 
     <!-- Contact Info -->
     <div class="contact-help">
-      <img src="https://cdn-icons-png.flaticon.com/512/2462/2462719.png" alt="chat" class="chat-icon" />
+      <img src="https://cdn-icons-png.flaticon.com/512/2462/2462719.png" alt="Chat Icon" class="chat-icon" />
       <div class="contact-text">
         <span>Need help?</span><br>
         <strong>(307) 555-0133</strong>
@@ -41,11 +41,9 @@
   </div>
 </header>
 
-<!-- JavaScript for Menu Toggle -->
 <script>
   function toggleMenu() {
-    const nav = document.getElementById("navbar");
-    nav.classList.toggle("active");
+    document.getElementById("navbar").classList.toggle("active");
   }
 </script>
 
