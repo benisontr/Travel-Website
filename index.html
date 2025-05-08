@@ -9,36 +9,46 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="main-header">
-    <div class="header-container">
-      <div class="logo">RouteX</div>
-  
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
+ <header class="main-header">
+  <div class="header-container">
+    <!-- Logo -->
+    <div class="logo">RouteX</div>
 
-      <!-- Navigation menu -->
-      <nav class="main-nav" id="navbar">
-        <ul>
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">ABOUT US</a></li>
-          <li><a href="#">STORY</a></li>
-          <li><a href="#">VISA</a></li>
-          <li><a href="#">BLOG</a></li>
-          <li><a href="#">PAGE</a></li>
-          <li><a href="#">CONTACT</a></li>
-        </ul>
-      </nav>
-  
-      <div class="contact-help">
-        <img src="https://cdn-icons-png.flaticon.com/512/2462/2462719.png" alt="chat" class="chat-icon" />
-        <div class="contact-text">
-          <span>Need help?</span><br>
-          <strong>(307) 555-0133</strong>
-        </div>
+    <!-- Hamburger Menu (Mobile) -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <!-- Navigation Menu -->
+    <nav class="main-nav" id="navbar">
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT US</a></li>
+        <li><a href="#">STORY</a></li>
+        <li><a href="#">VISA</a></li>
+        <li><a href="#">BLOG</a></li>
+        <li><a href="#">PAGE</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <!-- Contact Info -->
+    <div class="contact-help">
+      <img src="https://cdn-icons-png.flaticon.com/512/2462/2462719.png" alt="chat" class="chat-icon" />
+      <div class="contact-text">
+        <span>Need help?</span><br>
+        <strong>(307) 555-0133</strong>
       </div>
     </div>
-  </header>
-  
-  
+  </div>
+</header>
+
+<!-- JavaScript for Menu Toggle -->
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("navbar");
+    nav.classList.toggle("active");
+  }
+</script>
+
   <section class="hero">
     <div class="hero-content">
       <h1>Journey with Confidence<br><span class="highlight-green">Migrate</span> with Us</h1>
@@ -174,12 +184,6 @@
       </div>
     </div>
   </footer>
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById("navbar");
-      nav.classList.toggle("active");
-    }
-  </script>
-  
+ 
 </body>
 </html>
