@@ -481,50 +481,32 @@ body {
 .hamburger {
   display: none;
   font-size: 28px;
-  color: #13543e;
+  color: #13543e; /* Dark green */
+  background: none;
+  border: none;
   cursor: pointer;
-  margin-left: auto;
+  z-index: 1000; /* Ensure it's on top */
 }
 
-/* Responsive Navbar */
 @media (max-width: 768px) {
-  .header-container {
-    flex-wrap: wrap;
-    justify-content: space-between;
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
   }
 
   .main-nav {
-    display: none;
-    width: 100%;
-    background-color: #fff;
     position: absolute;
     top: 60px;
     left: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    z-index: 99;
+    width: 100%;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: none;
   }
 
   .main-nav.active {
     display: block;
   }
-
-  .main-nav ul {
-    flex-direction: column;
-    padding: 10px 20px;
-    gap: 10px;
-  }
-
-  .main-nav li a {
-    color: #13543e;
-    font-weight: 600;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .contact-help {
-    display: none; /* Hide help info on mobile to save space */
-  }
 }
-
